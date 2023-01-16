@@ -1,0 +1,204 @@
+@import "./global/colors";
+@import "./global/div";
+
+@media only screen and (max-width: 1023px) {
+    .inicio {
+        width: 89vw;
+        min-height: 100vh;
+        @include flex(column, center);
+
+        .openMenu {
+            width: 6vh;
+            height: 6vh;
+            @include flex(row, center);
+            position: fixed;
+            top: 1vh;
+            left: 1vw;
+            font-size: 4vh;
+            color: $aux;
+            border: .5vh solid $res;
+            background-color: transparent;
+            transition: 10s;
+        }
+
+        .image {
+            width: 60%;
+            margin-top: 2vh;
+            color: $aux;
+            box-shadow:
+                inset 2vw 3vw .5vw rgb(193, 193, 193),
+                inset -2vw -3vw .5vw rgb(193, 193, 193);
+
+            img {
+                width: 100%;
+                position: relative;
+                z-index: -2;
+            }
+        }
+
+        .title {
+            margin-top: -6%;
+            font-size: 6vw;
+
+            b {
+                color: $res;
+            }
+        }
+
+        .body {
+            width: 100%;
+            min-height: 100%;
+            @include flex(column, space-evenly);
+
+            .desc {
+                width: 100%;
+                padding: 1vh;
+                font-size: 1vh;
+                color: $fon;
+                text-align: center;
+                background-color: rgba(25, 25, 25, 0.9);
+                border: .25VW solid $res;
+                border-radius: 3vw;
+
+                h1 {
+                    border-bottom: .25vw solid $res;
+                }
+            }
+
+            .politicas {
+                width: 100%;
+                height: 35vh;
+                margin-top: 2vh;
+                @include flex(column, space-evenly);
+
+                .card {
+                    width: 100%;
+                    height: 25%;
+                    padding: 1vh;
+                    @include flex(column, center);
+                    color: $fon;
+                    font-size: 1vh;
+                    background-color: rgba(25, 25, 25, 0.9);
+                    border: .25VW solid $res;
+                    border-radius: 3vw;
+
+                    h1,
+                    h2,
+                    h3 {
+                        margin: 0;
+                        text-align: center;
+                    }
+
+                    h2 {
+                        color: $res;
+                    }
+                }
+            }
+
+            .lista {
+                display: none;
+            }
+
+            .desc2 {
+                width: 100%;
+                margin-top: 2vh;
+                margin-bottom: 2vh;
+                padding: 1vh;
+                font-size: 1vh;
+                color: $fon;
+                text-align: center;
+                background-color: rgba(25, 25, 25, 0.9);
+                border: .25VW solid $res;
+                border-radius: 3vw;
+
+                h1 {
+                    border-bottom: .25vw solid $res;
+                }
+
+                .list {
+                    width: 100%;
+                    margin-top: 2vh;
+                    border-top: .25vw solid $res;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .inicio {
+        width: 99.6vw;
+        max-height: 100vh;
+        margin-top: 8vh;
+        @include flex(column, flex-start);
+
+        .openMenu {
+            display: none;
+        }
+
+        .image {
+            width: 99.6vw;
+            height: 92vh;
+            @include flex(column, center);
+
+            .image2 {
+                width: 100%;
+                height: 92vh;
+                position: absolute;
+                background-image: url("../resources/newResources/Units1.JPG");
+                background-position: 100% 80%;
+                background-size: cover;
+                filter: brightness(0.40);
+                z-index: -1;
+            }
+
+            .phrase[ani='0'] {
+                @include flex(column, center);
+                color: $fon;
+                font-size: 4vw;
+                text-align: center;
+
+                i {
+                    opacity: 0;
+                }
+
+                b {
+                    opacity: 0;
+                    color: $res;
+                }
+            }
+
+            .phrase[ani='1'] {
+                @include flex(column, center);
+                color: $fon;
+                font-size: 4vw;
+                text-align: center;
+
+                i {
+                    opacity: 0;
+                    animation: phrase 3s ease 2s;
+                }
+
+                b {
+                    opacity: 0;
+                    color: $res;
+                    animation: phrase 5s ease;
+                }
+            }
+        }
+    }
+
+    @keyframes phrase {
+        0% {
+            opacity: 0;
+        }
+
+        90% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}

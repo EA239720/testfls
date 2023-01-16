@@ -1,0 +1,262 @@
+@import "./global/colors";
+@import "./global/div";
+
+@media only screen and (max-width: 1023px) {
+    .menu[men='0'] {
+        width: 100vw;
+        height: 100vh;
+        @include flex(column, space-evenly);
+        position: fixed;
+        right: 100vw;
+        background-color: $aux;
+        transition: .5s;
+
+        .logo {
+            width: 50vw;
+        }
+
+        .body {
+            width: 60%;
+            @include flex(column, center);
+
+            button {
+                width: 40vh;
+                height: 10vh;
+                @include flex(row, center);
+                color: $fon;
+                font-size: 3vh;
+                background-color: $aux;
+                border: none;
+                border-radius: 1.5rem;
+                transition: .5s;
+
+                p {
+                    color: $fon;
+                    font-size: 3vh;
+                    transition: .5s;
+                }
+
+                &:hover {
+                    color: $fho;
+                    background-color: $hov;
+
+                    p {
+                        color: $fho;
+                    }
+                }
+            }
+        }
+
+        .subMenu {
+            width: 60%;
+            @include flex(row, center);
+
+            .ws {
+                width: 50%;
+                margin-right: 2%;
+                display: none;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                color: $fon;
+                font-size: 1.9vw;
+                background-color: #00CF5A;
+                border: 2px solid #00CF5A;
+                border-radius: 10%;
+
+                &:hover {
+                    background-color: #00A146;
+                    border-color: #00A146;
+                }
+            }
+
+            button {
+                width: 30%;
+                background-color: transparent;
+                border: none;
+                border-radius: 10%;
+
+                &:hover {
+                    background-color: $hov;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .menu[men='1'] {
+        width: 100vw;
+        height: 100vh;
+        @include flex(column, space-evenly);
+        position: fixed;
+        right: 0vw;
+        background-color: $aux;
+        transition: .5s;
+
+        .logo {
+            width: 50vw;
+        }
+
+        .body {
+            width: 60%;
+            @include flex(column, center);
+
+            button {
+                width: 40vh;
+                height: 10vh;
+                @include flex(row, center);
+                color: $fon;
+                font-size: 3vh;
+                background-color: $aux;
+                border: none;
+                border-radius: 1.5rem;
+                transition: .5s;
+
+                p {
+                    color: $fon;
+                    font-size: 3vh;
+                    transition: .5s;
+                }
+
+                &:hover {
+                    color: $fho;
+                    background-color: $hov;
+
+                    p {
+                        color: $fho;
+                    }
+                }
+            }
+        }
+
+        .subMenu {
+            width: 60%;
+            @include flex(row, center);
+
+            .ws {
+                width: 50%;
+                margin-right: 2%;
+                display: none;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                color: $fon;
+                font-size: 1.9vw;
+                background-color: #00CF5A;
+                border: 2px solid #00CF5A;
+                border-radius: 10%;
+
+                &:hover {
+                    background-color: #00A146;
+                    border-color: #00A146;
+                }
+            }
+
+            button {
+                width: 30%;
+                background-color: transparent;
+                border: none;
+                border-radius: 10%;
+
+                &:hover {
+                    background-color: $hov;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .menu {
+        width: 100vw;
+        height: 8vh;
+        position: fixed;
+        @include flex(row, space-between);
+        background-color: $aux;
+
+        .logo {
+            width: 4vw;
+            margin-left: 3vw;
+        }
+
+        .body {
+            width: 60%;
+            @include flex(row, center);
+
+            button {
+                width: 40vh;
+                height: 8vh;
+                @include flex(row, center);
+                color: $fon;
+                font-size: 1.5vw;
+                background-color: $aux;
+                border: none;
+                border-radius: 1.5rem;
+                transition: .5s;
+
+                p {
+                    color: $fon;
+                    font-size: 0;
+                    transition: .5s;
+                }
+
+                &:hover {
+                    color: $fho;
+                    font-size: 1.5vw;
+                    background-color: $hov;
+
+                    p {
+                        color: $fho;
+                        font-size: 1.25vw;
+                    }
+                }
+            }
+        }
+
+        .subMenu {
+            width: 18%;
+            @include flex(row, center);
+
+            .ws {
+                width: 50%;
+                margin-right: 2%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                color: $fon;
+                font-size: 1.5vw;
+                background-color: #00CF5A;
+                border: 2px solid #00CF5A;
+                border-radius: 10%;
+
+                &:hover {
+                    background-color: #00A146;
+                    border-color: #00A146;
+                }
+            }
+
+            button {
+                width: 20%;
+                background-color: transparent;
+                border: none;
+                border-radius: 10%;
+
+                &:hover {
+                    background-color: $hov;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

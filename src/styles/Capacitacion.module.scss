@@ -1,0 +1,41 @@
+@import "./global/colors";
+@import "./global/div";
+
+@media only screen and (min-width: 1024px) {
+    .capacitacion {
+        width: 100vw;
+        height: 100vh;
+        margin-top: 8vh;
+        @include flex(column, flex-start);
+
+        .openMenu {
+            display: none;
+        }
+
+        .card {
+            width: 80%;
+            margin: 3vw;
+            @include flex(row, space-around);
+
+            .desc {
+                width: 60%;
+                margin: 2vw;
+                padding: 2vw;
+                color: $fon;
+                text-align: center;
+                background-color: rgba(25, 25, 25, 0.9);
+                border: .25VW solid $res;
+                border-radius: 3vw;
+
+                h1 {
+                    border-bottom: .25vw solid $res;
+                }
+            }
+
+            img {
+                width: 30%;
+                box-shadow: 10px 5px 5rem 1rem $man, -10px -5px 5rem 1rem $man;
+            }
+        }
+    }
+}

@@ -1,0 +1,267 @@
+@import "./global/colors";
+@import "./global/div";
+
+@media only screen and (max-width: 1023px) {
+    .unidades {
+        width: 100vw;
+        min-height: 100vh;
+        font-size: 1vh;
+        @include flex(column, flex-start);
+
+        .openMenu {
+            width: 6vh;
+            height: 6vh;
+            @include flex(row, center);
+            position: fixed;
+            top: 1vh;
+            left: 1vw;
+            font-size: 4vh;
+            color: $aux;
+            border: .5vh solid $res;
+            background-color: transparent;
+            transition: 10s;
+        }
+
+        .divisions {
+            width: 90vw;
+            margin-top: 8vh;
+            @include flex(column, space-evenly);
+
+            .card {
+                width: 100%;
+                margin-bottom: 2vh;
+                @include flex(column, center);
+                background-color: rgba(107, 107, 107, 0.9);
+                border: .25VW solid $res;
+                border-radius: 3vw;
+
+                .logo {
+                    width: 40%;
+                    padding: 5% 0%;
+                }
+
+                h1 {
+                    margin: 0;
+                    color: $res;
+                }
+
+                h2 {
+                    padding: 0% 20%;
+                    color: $fon;
+                    text-align: center;
+                }
+            }
+        }
+
+        .lista {
+            width: 100%;
+            @include flex(column, center);
+
+            .inter1,
+            .inter2 {
+                width: 100%;
+                box-shadow:
+                    inset 2rem 3rem .5rem rgb(193, 193, 193),
+                    inset -2rem -3rem .5rem rgb(193, 193, 193);
+
+                h1 {
+                    width: 90%;
+                    height: 60%;
+                    @include flex(column, center);
+                    padding: 2vw;
+                    color: $fon;
+                    text-align: center;
+                    background-color: rgba(107, 107, 107, 0.9);
+                    border: .25VW solid $res;
+                    border-radius: 3vw;
+                }
+            }
+
+            .inter1 {
+                @include flex(row, center);
+                background-image: url("../resources/newResources/Units1.JPG");
+                background-size: cover;
+                background-position: center;
+            }
+
+            .inter2 {
+                @include flex(row, center);
+                background-image: url("../resources/newResources/Units2.JPG");
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        .services {
+            width: 100%;
+            height: 60vh;
+            margin-bottom: 5vw;
+            @include flex(row, center);
+            background-image: url("../resources/newResources/Units3.JPG");
+            background-size: cover;
+            background-position: center;
+            box-shadow:
+                inset 2rem 3rem .5rem rgb(193, 193, 193),
+                inset -2rem -3rem .5rem rgb(193, 193, 193);
+
+            .card {
+                width: 100%;
+                height: 100%;
+                @include flex(column, space-evenly);
+
+                .info {
+                    width: 90%;
+                    height: 30%;
+                    @include flex(column, center);
+                    text-align: center;
+                    background-color: rgba(107, 107, 107, 0.9);
+                    border: .25VW solid $res;
+                    border-radius: 3vw;
+
+                    h1 {
+                        border-bottom: .25VW solid $res;
+                    }
+
+                    h1,
+                    h3 {
+                        color: $fon;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .unidades {
+        width: 100vw;
+        min-height: 100vh;
+        margin-top: 8vh;
+        @include flex(column, flex-start);
+
+        .openMenu {
+            display: none;
+        }
+
+        .divisions {
+            width: 100vw;
+            height: 80vh;
+            margin: 2.5vw 0;
+            @include flex(row, space-evenly);
+
+            .card {
+                width: 30%;
+                height: 75%;
+                @include flex(column, space-between);
+                background-color: rgba(107, 107, 107, 0.9);
+                border: .25VW solid $res;
+                border-radius: 3vw;
+
+                .logo {
+                    width: 80%;
+                    padding: 5% 0%;
+                }
+
+                h1 {
+                    color: $res;
+                }
+
+                h2 {
+                    padding: 0% 20%;
+                    color: $fon;
+                    text-align: center;
+                }
+            }
+
+            .image2 {
+                width: 90%;
+                height: 80vh;
+                position: absolute;
+                background-image: url("../resources/newResources/Units2.JPG");
+                background-position: 100% 50%;
+                background-size: cover;
+                filter: blur(.4rem);
+                z-index: -1;
+            }
+        }
+
+        .carac {
+            width: 100vw;
+            height: 80vh;
+            margin: 2.5vw 0;
+            @include flex(column, flex-start);
+
+            .title {
+                font-size: 3rem;
+            }
+
+            .grid {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: auto auto auto;
+
+                div {
+                    @include flex(column, center);
+
+                    h2 {
+                        width: 60%;
+                        height: 30vh;
+                        @include flex(column, center);
+                        color: $fon;
+                        text-align: center;
+                        background-color: rgba(107, 107, 107, 0.9);
+                        border: .25VW solid $res;
+                        border-radius: 3vw;
+                    }
+                }
+            }
+
+            .image3 {
+                width: 90%;
+                height: 80vh;
+                position: absolute;
+                background-image: url("../resources/newResources/Units3.JPG");
+                background-position: 100% 60%;
+                background-size: cover;
+                filter: blur(.4rem);
+                z-index: -1;
+            }
+        }
+
+        .servi {
+            width: 100vw;
+            height: 80vh;
+            margin: 2.5vw 0;
+            @include flex(row, space-around);
+
+            .card {
+                width: 25%;
+                height: 60%;
+                @include flex(column, space-evenly);
+                color: $fon;
+                text-align: center;
+                background-color: rgba(107, 107, 107, 0.9);
+                border: .25VW solid $res;
+                border-radius: 3vw;
+
+                h1 {
+                    width: 80%;
+                    color: $fon;
+                    border-bottom: .25vw solid $res;
+                }
+            }
+
+            .image4 {
+                width: 90%;
+                height: 80vh;
+                position: absolute;
+                background-image: url("../resources/newResources/Units4.JPG");
+                background-position: 100% 80%;
+                background-size: cover;
+                filter: blur(.4rem);
+                z-index: -1;
+            }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+@import "./global/colors";
+@import "./global/div";
+
+@media only screen and (min-width: 1024px) {
+    .nosotros {
+        width: 100vw;
+        min-height: 100vh;
+        margin-top: 8vh;
+        @include flex(column, flex-start);
+
+        .openMenu {
+            display: none;
+        }
+
+        .parallax {
+            width: 100vw;
+            height: 80vh;
+            @include flex(column, center);
+            background-image: url('../resources/newResources/Units211.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .desc {
+                width: 55%;
+                padding: 2vw;
+                color: $fon;
+                text-align: center;
+                background-color: rgba(25, 25, 25, 0.9);
+                border: .25VW solid $res;
+                border-radius: 3vw;
+
+                h1 {
+                    border-bottom: .25vw solid $res;
+                }
+            }
+        }
+
+        .sect {
+            width: 100vw;
+            height: auto;
+            @include flex(column, flex-start);
+
+            .title {
+                font-size: 3rem;
+            }
+
+            .grid {
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto auto auto;
+
+                div {
+                    @include flex(column, center);
+
+                    img {
+                        width: 30%;
+                    }
+
+                    h1 {
+                        color: $res;
+                    }
+
+                    div {
+                        width: 10rem;
+                        height: 10rem;
+                        @include flex(row, center);
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .paralax {
+            width: 100vw;
+            height: 80vh;
+            @include flex(column, center);
+            background-image: url('../resources/newResources/Services.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .poli {
+                width: 80%;
+                padding: 2vw;
+                @include flex(row, space-around);
+
+                div {
+                    width: 30%;
+                    height: 100%;
+                    @include flex(column, center);
+                    color: $fon;
+                    text-align: center;
+                    background-color: rgba(25, 25, 25, 0.9);
+                    border: .25VW solid $res;
+                    border-radius: 3vw;
+
+                    h3 {
+                        padding: 3rem;
+                    }
+                }
+            }
+        }
+
+        .valo {
+            width: 80vw;
+            height: auto;
+            @include flex(column, flex-start);
+
+            .title {
+                margin: 5rem;
+                font-size: 3rem;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: auto auto auto;
+
+                div {
+                    @include flex(column, space-between);
+
+                    h1 {
+                        color: $res;
+                    }
+
+                    h3 {
+                        width: 60%;
+                        margin-bottom: 5rem;
+                        text-align: center;
+                    }
+
+                    div {
+                        width: 10rem;
+                        height: 10rem;
+                        @include flex(row, center);
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

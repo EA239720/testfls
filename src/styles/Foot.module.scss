@@ -1,0 +1,87 @@
+@import "./global/colors";
+@import "./global/div";
+
+@media only screen and (max-width: 1023px) {
+    .footpage {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .footpage {
+        width: 100%;
+        height: 50vh;
+        @include flex(row, center);
+        background-color: $aux;
+
+        .menu {
+            width: 30%;
+            height: 80%;
+            @include flex(column, flex-start);
+            align-items: flex-end;
+            border-right: 2px solid rgb(193, 193, 193);
+
+            button {
+                margin-right: 1rem;
+                color: $fon;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                &:hover {
+                    color: $fho;
+                }
+            }
+        }
+
+        .contact {
+            width: 30%;
+            height: 80%;
+            @include flex(column, center);
+            color: $fon;
+            border-left: 2px solid rgb(193, 193, 193);
+
+            a {
+                color: $fon;
+
+                &:hover {
+                    color: $fho;
+                }
+            }
+
+            .redes {
+                width: 100%;
+                @include flex(row, space-evenly);
+                font-size: 1.5rem;
+            }
+
+            .inter {
+                margin-left: 1vw;
+                @include flex(row, center);
+                align-self: flex-start;
+            }
+
+            .subMenu {
+                width: 60%;
+                @include flex(row, center);
+
+                button {
+                    width: 60%;
+                    @include flex(row, space-between);
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 10%;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $hov;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
